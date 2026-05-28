@@ -1,0 +1,18 @@
+{
+  "name": "每日菜单",
+  "short_name": "每日菜单",
+  "description": "手机端私房菜谱和每日点菜菜单",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fff0f6",
+  "theme_color": "#fff0f6",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
