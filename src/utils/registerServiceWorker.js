@@ -3,8 +3,10 @@ export function registerServiceWorker() {
   if (import.meta.env.DEV) return
 
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {
-      // PWA support is a convenience, not a core app dependency.
-    })
+    navigator.serviceWorker
+      .register(`${import.meta.env.BASE_URL}sw.js`, { scope: import.meta.env.BASE_URL })
+      .catch(() => {
+        // PWA support is a convenience, not a core app dependency.
+      })
   })
 }

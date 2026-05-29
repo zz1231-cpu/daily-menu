@@ -1,5 +1,5 @@
 const CACHE_NAME = 'daily-menu-cache-v1'
-const APP_SHELL = ['/', '/manifest.webmanifest', '/icon.svg']
+const APP_SHELL = ['./', './manifest.webmanifest', './icon.svg']
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)))
@@ -37,7 +37,7 @@ self.addEventListener('fetch', (event) => {
         })
         .catch(() => {
           if (request.mode === 'navigate') {
-            return caches.match('/')
+            return caches.match('./')
           }
           return cached
         })
